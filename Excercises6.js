@@ -171,3 +171,9 @@ for (x in contact){
 }
 
 let keys = Object.keys(contact);
+
+var point1 = {x:10, y:20};
+var point2 = {x:10, y:20};
+
+let point3 = point1;
+console.log(point1 === point3);
