@@ -104,3 +104,25 @@ function COntraseñaValidaTrue(contraseña){
     }
 }
 
+function CalcularImpuestos(edad , ingresos){
+if (edad>=18 && ingresos >= 1000)
+{
+    return ingresos*0.40;
+} else
+{
+    return 0;
+}
+}
+
+function BMI (peso,altura){
+    let BMI = peso/ (altura**2)
+    if(BMI<18.5){
+        return "Bajo de peso";
+    }else if(BMI>=18.5 && BMI<25){
+        return "Normal";
+    }else if(BMI>=25 && BMI<30){
+        return "sobrepeso";
+    }else{
+        return "OBESO";
+    }
+} 
