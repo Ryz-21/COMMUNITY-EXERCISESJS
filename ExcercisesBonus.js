@@ -126,3 +126,22 @@ function BMI (peso,altura){
         return "OBESO";
     }
 } 
+
+function imprimirArray(lista){
+   for (let i = 0; i <lista.length; i++ ){
+    console.log(lista[i])
+   }
+}
+
+function NUmberLikes(likes){
+    if(likes >= 10000000){
+        return Math.floor(likes/1000000) + "M";
+    }else if (likes >= 1000){
+        return Math.floor(likes/1000) + "K"
+    } else {
+        return `${likes}`
+    }
+};
+
+console.log(NUmberLikes(10000))
+
