@@ -143,5 +143,22 @@ function NUmberLikes(likes){
     }
 };
 
-console.log(NUmberLikes(10000))
+function fizzBuzz(number) {
+  if (number % 3 === 0 && number % 5 === 0) {
+    return "fizzbuzz";
+  } else if (number % 3 === 0) {
+    return "fizz";
+  } else if (number % 5 === 0) {
+    return "buzz";
+  } else {
+    return number;
+  }
+}
 
+function contarRango (a,b) {
+    let contador = 0; //incianilizamos el 0
+    for (let i = a + 1; i < b; i++){ // que cuente desde el numero a hasta el b cuanto le falta 
+        contador++;
+    }
+    return contador;
+}
