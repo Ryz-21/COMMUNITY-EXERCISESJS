@@ -1,31 +1,16 @@
-/*
-En una variable tienes el lado de un cuadrado, debes escribir un programa que te calcule el área y el perímetro del cuadrado.
-
-El area la calculas como lado multiplicado por lado. El perímetro es la suma de los cuatro lados.
-
-Precio = 200;
-iva = 21;
-
-total = Precio + (Precio+21*Precio/100);
-
-console.log(`el total es ${total}`);
-*/
 
 
-/*
-En una variable tienes el lado de un cuadrado, debes escribir un programa que te calcule el área y el perímetro del cuadrado.
+function totalprecio (precio,iva){
+   let total = precio + (precio*21/precio/100);
+    console.log(`el total es ${total}`);
+}
 
-El area la calculas como lado multiplicado por lado. El perímetro es la suma de los cuatro lados.
 
-lado = 40;
 
-area = lado*lado;
-
-perimetro = lado*4
-
-console.log(`el area es ${area} el perimetro es ${perimetro}`)
-*/
-
+function calcularLadoCuadrado (lado,area){
+ let perimetro = lado * 4
+ console.log(`el area es ${area} el perimetro es ${perimetro}`)
+}
 /*
 let nombre = prompt('cual es tu nombre?');
 console.log(`cual es tu nombre ${nombre}`);
@@ -161,6 +146,25 @@ function contarRango (a,b) {
         contador++;
     }
     return contador;
+}
+
+
+function sumarRango (a,b){
+    let suma = 0;
+    for (let i = a + 1; i <b; i++){ // intera entre los numeros 
+       suma +=i //aumenta entre cadad numero 
+    }
+    return suma;
+}
+
+function numerodeAs (palabra){
+    let cantidad = 0;
+    for (let i = 0; i<palabra.length; i++){ //intera sobre la palabra 
+        if (palabra[i] === "a"){ // si en la palabra se encuentra la a
+           cantidad++; // se aumenta 
+        }
+    }
+    return cantidad;
 }
 
 
