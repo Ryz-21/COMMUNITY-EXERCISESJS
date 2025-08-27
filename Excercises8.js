@@ -54,3 +54,82 @@ let Car = function(make,model){
 }
 let car = new Car('Dodge', 'Viper');
 console.log(`${car.make} ${car.model}`)
+
+let Vehicle = function(initialData){
+    let {id, latitude, longitud} = initialData;
+     this.setPosition = function(latitude, longitude) {
+        this.time = Date.now();
+        this.longitude = longitude;
+        this.latitude = latitude;
+    }; 
+    this.id = id;
+    this.status = "unavailable";
+    this.setPosition(latitude, longitud);
+};
+
+ let vehicle1 = new Vehicle({id: "AL1024", latitude: 59.367647, longitude: 18.213451}); 
+ let vehicle2 = new Vehicle({longitude: 18.213423, latitude: 59.367628, id: "AL1024"}); 
+
+ 
+ let vehicles = function({id, latitude, longitude}){
+    this.setPosition = function({latitude, longitude}) {
+        this.time = Date.now();
+        this.longitude = longitude;
+        this.latitude = latitude;
+    };
+    this.getPosition = function() {
+        return {
+            latitude: this.latitude,
+            longitude: this.longitude
+        };
+    };
+    this.id = id;
+    this.status = "unavailable";
+    this.setPosition({latitude, longitude});
+};
+let vehicles1 = new Vehicle({id: "AL1024", latitude: 59.367647, longitude: 18.213451});
+let vehicles2 = new Vehicle({longitude: 18.213423, latitude: 59.367628, id: "AL1024"});
+
+class AlmostEmptyClass {
+    constructor(sth) {
+        console.log(sth);
+    };
+    sayHi(){
+        console.log("Hi")
+    };
+};
+
+let almostEmptyObject = new AlmostEmptyClass(120); // -> 120 dclaracion de variable de la clase
+almostEmptyObject.sayHi(); // -> Hi! 
+
+class Vehicles {
+    constructor({id, latitude, longitud}){
+        this.setPosition = function({latitude, longitud}){
+            this.time = Date.now();
+            this.longitude = this.longitude;
+            this.latitude = latitude;
+        };
+        this.getPosition = function(){
+            return {
+                latitude: this.latitude,
+                longitude: this.longitude
+            };
+        };
+        this.id = id;
+         this.status = this.latitude,
+         this.setPosition({latitude , longitude});
+    };
+};
+
+function namedFunction() { 
+    console.log("I'm named, I hope ... ") 
+};
+let anonymousFunction = function() {
+    console.log("I'm a bit anonymous ...")
+};
+let notExactlyAnonymousFunction = function anotherNamedFunction() {
+    console.log("I'm confused ...")
+};
+namedFunction();    // -> I'm named, I hope ...
+anonymousFunction();    // -> I'm a bit anonymous ...
+notExactlyAnonymousFunction();    // -> I'm confused ...
