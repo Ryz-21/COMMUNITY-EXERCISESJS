@@ -1,35 +1,45 @@
 
 
 function totalprecio (precio,iva){
-   let total = precio + (precio*21/precio/100);
-    console.log(`el total es ${total}`);
+    // el total es igual a la formula matematica incluyendo iva
+    // que es total = 200+(200*21/precio/100)
+   let total = precio + (precio*iva/precio/100);
+    console.log(`el total es ${total}`); //retornamos el valor 
 }
 
 
 
-function calcularLadoCuadrado (lado,area){
- let perimetro = lado * 4
+function calcularLadoCuadrado (lado){
+//el area de un cuadrado es la multiplicacion del valor de cada lado
+ let area = lado*lado
+ let perimetro = lado * area //el perimetro es el lado * area 
  console.log(`el area es ${area} el perimetro es ${perimetro}`)
 }
-/*
-let nombre = prompt('cual es tu nombre?');
+
+function devolverNombre (){
+let nombre = prompt('cual es tu nombre?'); // promt funcion como imput
 console.log(`cual es tu nombre ${nombre}`);
+}
+/*
 1960 valdivia chile dato ramdon 
 */
 
 
 function mediadetres(numero1,numero2,numero3){
-let total = (numero1+numero2+numero3)/3
+let total = (numero1+numero2+numero3)/3 // calcular media formula matematica 
 console.log(`la media de los numeros es ${total}`)
 }
 
 function calcularCosumo(numero_litros,numero_kilometros){
- let cantidad_consumida = numero_litros/numero_kilometros;
+ let cantidad_consumida = numero_litros/numero_kilometros; // se devide la cantidad de litros con el nuemero de kiloemtros
 console.log(`la cantidad de consumo de combusstible es ${cantidad_consumida}`)
 }
  
 function cambiarhoras (horas,minutos){
-   let segundos = horas*60*60+(minutos*60)
+    // si sabemos que el valor de una hora son 60 minutos
+    // el valor de un minuto son 60 segundos
+    // entonces 1 hora es 60 minutos entoncess es 60*60 
+   let segundos = horas*60*60+(minutos*60) 
     console.log(`la cantidad de segundos son${segundos}`)
 }
 
@@ -57,10 +67,13 @@ let cebollagramos = patatasKilos * 300;
 }
 
 function CambiarVariables(VarUNo , VarDOs){
+
+    // solo reasigno orden de variables y ya 
     let uno = VarUNo;
     let dos = VarDOs;
     console.log(`el orden de variable es ${uno} y el otro ${dos}`)
     
+    // se utiliza un tercero que servira como almacenador
     let temporal = uno
     uno = dos;
     dos = temporal;
@@ -74,6 +87,7 @@ function paroinpar(numero){
 }
 
 function ContraseñaValida(contraseña){
+    // si son excatamente iguales 
     if (contraseña === "2Fj(jjbFsuj" || contraseña === "eoZiugBf&g9")
         console.log(`la contraseña es correcta`);
     else{
@@ -82,6 +96,7 @@ function ContraseñaValida(contraseña){
 }
 
 function COntraseñaValidaTrue(contraseña){
+    // devolver true o false 
     if(contraseña === "2Fj(jjbFsuj"|| contraseña === "eoZiugBf&g9")
         return true;
     else{
@@ -100,10 +115,10 @@ if (edad>=18 && ingresos >= 1000)
 }
 
 function BMI (peso,altura){
-    let BMI = peso/ (altura**2)
+    let BMI = peso/ (altura**2) 
     if(BMI<18.5){
         return "Bajo de peso";
-    }else if(BMI>=18.5 && BMI<25){
+    }else if(BMI>=18.5 && BMI<25){ // a diferencia de python que para entre rangos se maneja <= <= de esta manera
         return "Normal";
     }else if(BMI>=25 && BMI<30){
         return "sobrepeso";
@@ -113,13 +128,14 @@ function BMI (peso,altura){
 } 
 
 function imprimirArray(lista){
-   for (let i = 0; i <lista.length; i++ ){
+   for (let i = 0; i <lista.length; i++ ){ // intera dentro de la array y lista uno por uno 
     console.log(lista[i])
    }
 }
 
-function NUmberLikes(likes){
+function NUmberLikes(likes){ 
     if(likes >= 1000000){
+        // math floor redondea a lo mas cercano por eso lo aplicamos 
         return Math.floor(likes/1000000) + "M";
     }else if (likes >= 1000){
         return Math.floor(likes/1000) + "K"
@@ -129,7 +145,7 @@ function NUmberLikes(likes){
 };
 
 function fizzBuzz(number) {
-  if (number % 3 === 0 && number % 5 === 0) {
+  if (number % 3 === 0 && number % 5 === 0) { // validamos si son par de 3 o 5 si no pasamos a validacion unitaria 
     return "fizzbuzz";
   } else if (number % 3 === 0) {
     return "fizz";
@@ -168,4 +184,28 @@ function numerodeAs (palabra){
 }
 
 
+function numerodeCaracteres (palabra , letra){
+    let cantidad = 0;
+    for (let i = 0; i<palabra.length; i++){
+        if(palabra[i] === letra){ // solo cambiamos la a por la letra que queremos 
+            cantidad++;
+        }
+    }
+    return cantidad
+}
 
+function sumarArreglo (Array){
+    let total = 0;
+     for (let i = 0; i <Array.length; i++ ){
+        total += Array[i];
+     }
+     return total;
+}
+
+function MUltiplicarArreglo (Array){
+    let total = 0;
+    for(let i = 0; i<Array.length; i++){
+        total *= Array[i];
+    }
+    return total
+}
