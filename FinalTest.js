@@ -146,11 +146,3 @@ let ret = (function (){
 console.log(`${msg} ${ret}`);
 
 
-let fn = function(msg, n) {
-    console.log(`${msg}: ${this.a ** n}`);
-}
-
-let obj = { a: 2 };
-let bfn = fn.bind(obj, "Power");
-
-bfn(2, 3);

@@ -196,16 +196,16 @@ function numerodeCaracteres (palabra , letra){
 
 function sumarArreglo (Array){
     let total = 0;
-     for (let i = 0; i <Array.length; i++ ){
-        total += Array[i];
+     for (let i = 0; i <Array.length; i++ ){ // intera sobre la lista
+        total += Array[i]; // va sumando cada iteracion uno por uno 
      }
      return total;
 }
 
 function MUltiplicarArreglo (Array){
     let total = 0;
-    for(let i = 0; i<Array.length; i++){
-        total *= Array[i];
+    for(let i = 0; i<Array.length; i++){ // intera sobre todo 
+        total *= Array[i]; // multiplica uno por uno 
     }
     return total
 }
